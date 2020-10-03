@@ -21,14 +21,14 @@ function App() {
     const newElem = list.find( el => el.id === id)
     setList2([...list2, newElem]);
 
-    setList(list.filter(el => el !== newElem))
+    setList(list.filter(el => el.id !== id))
   }
 
   const moveElementToAnotherList2 = (id) => {
     const newElem = list2.find( el => el.id === id)
     setList([...list, newElem]);
 
-    setList2(list2.filter(el => el !== newElem))
+    setList2(list2.filter(el => el.id !== id))
   }
 
   return (
